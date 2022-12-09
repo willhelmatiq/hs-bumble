@@ -12,7 +12,7 @@ export namespace Components {
     }
     interface HsHeader {
         /**
-          * The `level` property allows users to indicate what header hierarchy this element is. It mus take a number from `1` to `6`.
+          * The `level` property allows users to indicate what header hierarchy this element is. It must take a number from `1` to `6`.
          */
         "level": number;
         /**
@@ -51,7 +51,7 @@ declare namespace LocalJSX {
     }
     interface HsHeader {
         /**
-          * The `level` property allows users to indicate what header hierarchy this element is. It mus take a number from `1` to `6`.
+          * The `level` property allows users to indicate what header hierarchy this element is. It must take a number from `1` to `6`.
          */
         "level"?: number;
         /**

@@ -1,6 +1,6 @@
 import { Component, h, Prop, Element } from '@stencil/core';
 import { css } from '@emotion/css';
-import { ColorPrimary, ColorBody, FontHeading1 } from '../../design-tokens/js/variables.js';
+import { ColorPrimaryColor, ColorNeutralCoolColor, FontH1Heading } from '../../design-tokens/js/variables.js';
 
 /**
  * Use this array as a pivotal collection of Host attributes to remove.
@@ -14,12 +14,12 @@ const ariaAttributes = [
  * The component starts with the @Component decorator, part of the TypeScript built-in capabilities
  * and currently an stage 3 proposal in the TC39 committee. More info:
  * https://github.com/tc39/proposal-decorators.
- * 
+ *
  * Please check out the comment blocks on top the component and its props. Whatever content we place
  * right above the @Component decorator will become the actual description of teh component in
  * the generated documentation. Such blocks do support markdown syntax, so you can provide rich descriptions
- * right on the code. 
- * 
+ * right on the code.
+ *
  * Same applies to @Prop decorators: Whatever text we place right on top of each Prop will eventually be included
  * in the properties output table displayed in the README docs generated upon building the project.
  */
@@ -53,16 +53,16 @@ export class HsHeader {
    * These can be recognized by the @Prop decorator. The truthy 'reflect'
    * property of the decorator object payload ensures that such property
    * will be also available in HTML, and not just when consuming Stencil
-   * components from other components. 
+   * components from other components.
    */
 
   /**
    * The `level` property allows users to indicate what header hierarchy this element is.
-   * It mus take a number from `1` to `6`.
+   * It must take a number from `1` to `6`.
    */
   @Prop({ reflect: true })
   level: number = 1; // This annotation is a TypeScript union type, defaulting to 1
-  
+
   /**
    * Provides support for implementing horizontal alignment to the text contained in the header.
    */
@@ -81,7 +81,7 @@ export class HsHeader {
    */
   componentWillLoad() {
     /**
-     * We validate here that the 'level' property, which will be used later to compose a 
+     * We validate here that the 'level' property, which will be used later to compose a
      * HTML tag 'on the fly', will only take values from 1 to 6. TypeScript gives us
      * statical type checking on dev time but TypeScript annotations are wiped once the component
      * is traspiled. This conditional check ensures that the component is properly used
@@ -119,11 +119,11 @@ export class HsHeader {
      * way to implement dynamic CSS based on component logic or external tokens.
      */
     const tagStyles = css`
-      color: ${this.level === 1 ? ColorPrimary : ColorBody};
-      font-size: ${this.level === 1 ? `${FontHeading1.fontSize}px` : undefined};
+      color: ${this.level === 1 ? ColorPrimaryColor : ColorNeutralCoolColor};
+      font-size: ${this.level === 1 ? `${FontH1Heading.fontSize}px` : undefined};
       text-align: ${this.textAlign};
     `;
- 
+
     return (
       <Tag className={tagStyles} role="heading">
         <slot></slot>
