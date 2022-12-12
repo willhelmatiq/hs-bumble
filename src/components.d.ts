@@ -6,7 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface HsButton {
+    interface BmButton {
         "size": string;
         "variant": string;
     }
@@ -20,17 +20,20 @@ export namespace Components {
          */
         "textAlign": 'left' | 'right' | 'center';
     }
+    interface HsTextInput {
+        "fontStyle": 'normal' | 'italic' | 'oblique' | 'inherit';
+    }
 }
-export interface HsButtonCustomEvent<T> extends CustomEvent<T> {
+export interface BmButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLHsButtonElement;
+    target: HTMLBmButtonElement;
 }
 declare global {
-    interface HTMLHsButtonElement extends Components.HsButton, HTMLStencilElement {
+    interface HTMLBmButtonElement extends Components.BmButton, HTMLStencilElement {
     }
-    var HTMLHsButtonElement: {
-        prototype: HTMLHsButtonElement;
-        new (): HTMLHsButtonElement;
+    var HTMLBmButtonElement: {
+        prototype: HTMLBmButtonElement;
+        new (): HTMLBmButtonElement;
     };
     interface HTMLHsHeaderElement extends Components.HsHeader, HTMLStencilElement {
     }
@@ -38,14 +41,21 @@ declare global {
         prototype: HTMLHsHeaderElement;
         new (): HTMLHsHeaderElement;
     };
+    interface HTMLHsTextInputElement extends Components.HsTextInput, HTMLStencilElement {
+    }
+    var HTMLHsTextInputElement: {
+        prototype: HTMLHsTextInputElement;
+        new (): HTMLHsTextInputElement;
+    };
     interface HTMLElementTagNameMap {
-        "hs-button": HTMLHsButtonElement;
+        "bm-button": HTMLBmButtonElement;
         "hs-header": HTMLHsHeaderElement;
+        "hs-text-input": HTMLHsTextInputElement;
     }
 }
 declare namespace LocalJSX {
-    interface HsButton {
-        "onClicked"?: (event: HsButtonCustomEvent<any>) => void;
+    interface BmButton {
+        "onClicked"?: (event: BmButtonCustomEvent<any>) => void;
         "size"?: string;
         "variant"?: string;
     }
@@ -59,17 +69,22 @@ declare namespace LocalJSX {
          */
         "textAlign"?: 'left' | 'right' | 'center';
     }
+    interface HsTextInput {
+        "fontStyle"?: 'normal' | 'italic' | 'oblique' | 'inherit';
+    }
     interface IntrinsicElements {
-        "hs-button": HsButton;
+        "bm-button": BmButton;
         "hs-header": HsHeader;
+        "hs-text-input": HsTextInput;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "hs-button": LocalJSX.HsButton & JSXBase.HTMLAttributes<HTMLHsButtonElement>;
+            "bm-button": LocalJSX.BmButton & JSXBase.HTMLAttributes<HTMLBmButtonElement>;
             "hs-header": LocalJSX.HsHeader & JSXBase.HTMLAttributes<HTMLHsHeaderElement>;
+            "hs-text-input": LocalJSX.HsTextInput & JSXBase.HTMLAttributes<HTMLHsTextInputElement>;
         }
     }
 }

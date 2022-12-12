@@ -1,0 +1,56 @@
+@import "../../design-tokens/css/_variables.css";
+
+:host {
+  display: block;
+}
+
+button {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+
+button.primary {
+  color: var(--hs-color-neutral-cool-color-lighter);
+  background-color: var(--hs-color-primary-color);
+}
+
+button.secondary {
+  color: var(--hs-color-neutral-cool-color-lighter);
+  background-color: var(--hs-color-secondary-color);
+}
+
+button.success {
+  color: var(--hs-color-neutral-cool-color-lighter);
+  background-color: var(--hs-color-success-color);
+}
+
+button.warning {
+  color: var(--hs-color-neutral-cool-color-lighter);
+  background-color: var(--hs-color-warning-color);
+}
+
+button.error {
+  color: var(--hs-color-neutral-cool-color-lighter);
+  background-color: var(--hs-color-danger-color);
+}
+
+button.small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+button.medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+
+button.large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+

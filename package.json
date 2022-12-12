@@ -28,6 +28,7 @@
     "@storybook/theming": "^7.0.0-alpha.58",
     "@types/jest": "^27.0.3",
     "babel-loader": "^8.3.0",
+    "chromatic": "^6.12.0",
     "concurrently": "^7.6.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.5",
@@ -46,12 +47,21 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "transform-tokens": "node ./src/design-tokens/config/transform-tokens.js",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=9566283e80ef"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deeleman/design-system-boilerplate.git"
   },
-  "author": "Pablo Deeleman",
-  "license": "MIT"
+  "author": {
+    "name": "Pablo Deeleman"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deeleman/design-system-boilerplate/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/deeleman/design-system-boilerplate#readme",
+  "_id": "design-system-boilerplate@1.0.0"
 }
