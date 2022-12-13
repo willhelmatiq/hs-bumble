@@ -15,28 +15,28 @@ button {
 }
 
 button.primary {
-  color: var(--hs-color-neutral-cool-color-lighter);
-  background-color: var(--hs-color-primary-color);
+  color: var(--hs-color-typography-text-color-text-neutralcool-lighter);
+  background-color: var(--hs-color-buttons-primary-button-color-buttonbackground-primary-default);
 }
 
 button.secondary {
-  color: var(--hs-color-neutral-cool-color-lighter);
-  background-color: var(--hs-color-secondary-color);
+  color: var(--hs-color-typography-text-color-text-neutralcool-lighter);
+  background-color: var(--hs-color-buttons-secondary-button-color-buttonbackground-secondary-default);
 }
 
 button.success {
-  color: var(--hs-color-neutral-cool-color-lighter);
-  background-color: var(--hs-color-success-color);
+  color: var(--hs-color-typography-text-color-text-neutralcool-lighter);
+  background-color: var(--hs-color-buttons-success-button-color-buttontext-success-default);
 }
 
 button.warning {
-  color: var(--hs-color-neutral-cool-color-lighter);
-  background-color: var(--hs-color-warning-color);
+  color: var(--hs-color-typography-text-color-text-neutralcool-lighter);
+  background-color: var(--hs-color-buttons-warning-button-color-buttontext-warning-default);
 }
 
 button.error {
-  color: var(--hs-color-neutral-cool-color-lighter);
-  background-color: var(--hs-color-danger-color);
+  color: var(--hs-color-typography-text-color-text-neutralcool-lighter);
+  background-color: var(--hs-color-buttons-danger-button-color-buttonborder-danger-default);
 }
 
 button.small {

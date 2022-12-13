@@ -1,6 +1,6 @@
 import { Component, h, Prop, Element } from '@stencil/core';
 import { css } from '@emotion/css';
-import { ColorPrimaryColor, ColorNeutralCoolColor, FontH1Heading } from '../../design-tokens/js/variables.js';
+import { ColorTypographyHeaderColorHeaderPrimary, ColorTypographyTextColorTextNeutralcoolLighter, FontTextStylesHeaderH1Heading } from '../../design-tokens/js/variables.js';
 
 /**
  * Use this array as a pivotal collection of Host attributes to remove.
@@ -119,8 +119,8 @@ export class BmHeader {
      * way to implement dynamic CSS based on component logic or external tokens.
      */
     const tagStyles = css`
-      color: ${this.level === 1 ? ColorPrimaryColor : ColorNeutralCoolColor};
-      font-size: ${this.level === 1 ? `${FontH1Heading.fontSize}px` : undefined};
+      color: ${this.level === 1 ? ColorTypographyHeaderColorHeaderPrimary : ColorTypographyTextColorTextNeutralcoolLighter};
+      font-size: ${this.level === 1 ? `${FontTextStylesHeaderH1Heading.fontSize}px` : undefined};
       text-align: ${this.textAlign};
     `;
 
