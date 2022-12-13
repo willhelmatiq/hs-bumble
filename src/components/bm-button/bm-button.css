@@ -15,7 +15,7 @@ button {
 }
 
 button.primary {
-  color: var(--hs-color-typography-text-color-text-neutralcool-lighter);
+  color: var(--hs-color-buttons-primary-button-color-buttontext-primary-default);
   background-color: var(--hs-color-buttons-primary-button-color-buttonbackground-primary-default);
 }
 
