@@ -1,9 +1,58 @@
 /**
  * Do not edit directly
- * Generated on Tue, 13 Dec 2022 09:57:25 GMT
+ * Generated on Tue, 13 Dec 2022 21:19:08 GMT
  */
 
 :root {
+  --hs-sizes-8: 8;
+  --hs-sizes-12: 12;
+  --hs-sizes-14: 14;
+  --hs-sizes-16: 16;
+  --hs-sizes-18: 18;
+  --hs-sizes-24: 24;
+  --hs-sizes-32: 32;
+  --hs-sizes-40: 40;
+  --hs-sizes-48: 48;
+  --hs-sizes-56: 56;
+  --hs-sizes-80: 80;
+  --hs-sizes-104: 104;
+  --hs-sizes-128: 128;
+  --hs-spacing-2: [object Object];
+  --hs-spacing-4: [object Object];
+  --hs-spacing-6: [object Object];
+  --hs-spacing-10: [object Object];
+  --hs-spacing-14: [object Object];
+  --hs-spacing-18: [object Object];
+  --hs-spacing-22: [object Object];
+  --hs-spacing-mixed: [object Object];
+  --hs-spacing-bottom-2: [object Object];
+  --hs-spacing-bottom-4: [object Object];
+  --hs-spacing-bottom-6: [object Object];
+  --hs-spacing-bottom-10: [object Object];
+  --hs-spacing-bottom-14: [object Object];
+  --hs-spacing-bottom-18: [object Object];
+  --hs-spacing-bottom-22: [object Object];
+  --hs-spacing-top-2: [object Object];
+  --hs-spacing-top-4: [object Object];
+  --hs-spacing-top-6: [object Object];
+  --hs-spacing-top-10: [object Object];
+  --hs-spacing-top-14: [object Object];
+  --hs-spacing-top-18: [object Object];
+  --hs-spacing-top-22: [object Object];
+  --hs-spacing-left-2: [object Object];
+  --hs-spacing-left-4: [object Object];
+  --hs-spacing-left-6: [object Object];
+  --hs-spacing-left-10: [object Object];
+  --hs-spacing-left-14: [object Object];
+  --hs-spacing-left-18: [object Object];
+  --hs-spacing-left-22: [object Object];
+  --hs-spacing-right-2: [object Object];
+  --hs-spacing-right-4: [object Object];
+  --hs-spacing-right-6: [object Object];
+  --hs-spacing-right-10: [object Object];
+  --hs-spacing-right-14: [object Object];
+  --hs-spacing-right-18: [object Object];
+  --hs-spacing-right-22: [object Object];
   --hs-color-typography-text-color-text-neutralcool-darker: #0e161e;
   --hs-color-typography-text-color-text-neutralcool: #41464b;
   --hs-color-typography-text-color-text-neutralcool-lighter: #f5f5f5;
@@ -96,16 +145,17 @@
   --hs-color-buttons-success-button-color-buttontext-success-focused: #02a862;
   --hs-color-buttons-success-button-color-buttontext-success-pressed: #fcfbf8;
   --hs-color-buttons-success-button-color-buttontext-success-disabled: #b1b3b5;
+  --hs-color-coor-palette-primary-color-lighter: #fdedc1;
   --hs-color-coor-palette-primary-color: #ffc629;
   --hs-color-coor-palette-primary-color-darker: #d49f0b;
-  --hs-color-coor-palette-primary-color-lighter: #fdedc1;
   --hs-color-coor-palette-secondary-color-lightest: #b3defc;
   --hs-color-coor-palette-secondary-color-lighter: #3eb3f7;
   --hs-color-coor-palette-secondary-color: #039df4;
-  --hs-color-coor-palette-neutral-cool-color-lighter: #f5f5f5;
-  --hs-color-coor-palette-neutral-cool-color: #b1b3b5;
-  --hs-color-coor-palette-neutral-cool-color-darker: #41464b;
   --hs-color-coor-palette-neutral-cool-color-darkest: #0e161e;
+  --hs-color-coor-palette-neutral-cool-color-darker: #41464b;
+  --hs-color-coor-palette-neutral-cool-color: #b1b3b5;
+  --hs-color-coor-palette-neutral-cool-color-lighter: #f5f5f5;
+  --hs-color-coor-palette-neutral-color-warmwhite: #fcfbf8;
   --hs-color-coor-palette-neutral-warm-color-lighter: #f6f3f1;
   --hs-color-coor-palette-neutral-warm-color: #dfd7d4;
   --hs-color-coor-palette-neutral-warm-color-darker: #917b76;
@@ -113,14 +163,12 @@
   --hs-color-coor-palette-danger-color-darker: #9f161b;
   --hs-color-coor-palette-danger-color: #ee2626;
   --hs-color-coor-palette-danger-color-lightest: #fff1ed;
-  --hs-color-coor-palette-success-color-lightest: #dffff9;
-  --hs-color-coor-palette-success-color-lighter: #94e9d0;
-  --hs-color-coor-palette-success-color: #02a862;
   --hs-color-coor-palette-success-color-darker: #016b3c;
-  --hs-color-coor-palette-warning-color-lighter: #fff2de;
-  --hs-color-coor-palette-warning-color: #ffa41d;
+  --hs-color-coor-palette-success-color: #02a862;
+  --hs-color-coor-palette-success-color-lightest: #dffff9;
   --hs-color-coor-palette-warning-color-darker: #bc7509;
-  --hs-color-coor-palette-neutral-color-warmwhite: #fcfbf8;
+  --hs-color-coor-palette-warning-color: #ffa41d;
+  --hs-color-coor-palette-warning-color-lighter: #fff2de;
   --hs-font-text-styles-body-p1-body: [object Object];
   --hs-font-text-styles-body-p2-section-header: [object Object];
   --hs-font-text-styles-body-p3-buttons-and-forms: [object Object];
