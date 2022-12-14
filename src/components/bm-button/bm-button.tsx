@@ -13,6 +13,9 @@ export class BmButton {
   @Prop()
   size = "medium";
 
+  // @Prop()
+  // state = "active";
+
   @Event({})
   clicked;
 

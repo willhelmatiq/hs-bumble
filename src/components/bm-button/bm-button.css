@@ -19,24 +19,108 @@ button.primary {
   background-color: var(--hs-color-buttons-primary-button-color-buttonbackground-primary-default);
 }
 
-button.secondary {
-  color: var(--hs-color-typography-text-color-text-neutralcool-lighter);
-  background-color: var(--hs-color-buttons-secondary-button-color-buttonbackground-secondary-default);
+button.primary:hover {
+  color: var(--hs-color-buttons-primary-button-color-buttontext-primary-hover);
+  background-color: var(--hs-color-buttons-primary-button-color-buttonbackground-primary-hover);
 }
 
+button.primary:focus {
+  color: var(--hs-color-buttons-primary-button-color-buttontext-primary-focused);
+  border-color: var(--hs-color-buttons-primary-button-color-buttonborder-primary-focused);
+  background-color: var(--hs-color-buttons-primary-button-color-buttonbackground-primary-focused);
+}
+
+button.primary:active {
+  color: var(--hs-color-buttons-primary-button-color-buttontext-primary-pressed);
+  background-color: var(--hs-color-buttons-primary-button-color-buttonbackground-primary-pressed);
+}
+
+/*button.disabled{*/
+/*  cursor: not-allowed;*/
+/*  pointer-events: none;*/
+/*  color: var(--hs-color-buttons-primary-button-color-buttontext-primary-disabled);*/
+/*  background-color: var(--hs-color-buttons-primary-button-color-buttonbackground-primary-disabled);*/
+/*}*/
+
+button.secondary {
+  color: var(--hs-color-buttons-secondary-button-color-buttontext-secondary-default);
+  border-color: var(--hs-color-buttons-secondary-button-color-buttonborder-secondary-default);
+  background-color: var(--hs-color-buttons-secondary-button-color-buttonbackground-secondary-default);
+}
+button.secondary:hover {
+  color: var(--hs-color-buttons-secondary-button-color-buttontext-secondary-hover);
+  border-color: var(--hs-color-buttons-secondary-button-color-buttonborder-secondary-hover);
+  background-color: var(--hs-color-buttons-secondary-button-color-buttonbackground-secondary-hover);
+}
+button.secondary:focus {
+  color: var(--hs-color-buttons-secondary-button-color-buttontext-secondary-focused);
+  border-color: var(--hs-color-buttons-secondary-button-color-buttonborder-secondary-focused);
+  background-color: var(--hs-color-buttons-secondary-button-color-buttonbackground-secondary-focused);
+}
+button.secondary:active {
+  color: var(--hs-color-buttons-secondary-button-color-buttontext-secondary-pressed);
+  background-color: var(--hs-color-buttons-secondary-button-color-buttonbackground-secondary-pressed);
+}
+
+
 button.success {
-  color: var(--hs-color-typography-text-color-text-neutralcool-lighter);
-  background-color: var(--hs-color-buttons-success-button-color-buttontext-success-default);
+  color: var(--hs-color-buttons-success-button-color-buttontext-success-default);
+  border-color: var(--hs-color-buttons-success-button-color-buttonborder-success-default);
+  background-color: var(--hs-color-buttons-success-button-color-buttonbackground-success-default);
+}
+button.success:hover {
+  color: var(--hs-color-buttons-success-button-color-buttontext-success-hover);
+  border-color: var(--hs-color-buttons-success-button-color-buttonborder-success-hover);
+  background-color: var(--hs-color-buttons-success-button-color-buttonbackground-success-hover);
+}
+button.success:focus {
+  color: var(--hs-color-buttons-success-button-color-buttontext-success-focused);
+  border-color: var(--hs-color-buttons-success-button-color-buttonborder-success-focused);
+  background-color: var(--hs-color-buttons-success-button-color-buttonbackground-success-focused);
+}
+button.success:active {
+  color: var(--hs-color-buttons-success-button-color-buttontext-success-pressed);
+  background-color: var(--hs-color-buttons-success-button-color-buttonbackground-success-pressed);
 }
 
 button.warning {
-  color: var(--hs-color-typography-text-color-text-neutralcool-lighter);
-  background-color: var(--hs-color-buttons-warning-button-color-buttontext-warning-default);
+  color: var(--hs-color-buttons-warning-button-color-buttontext-warning-default);
+  border-color: var(--hs-color-buttons-warning-button-color-buttonborder-warning-default);
+  background-color: var(--hs-color-buttons-warning-button-color-buttonbackground-warning-default);
+}
+button.warning:hover {
+  color: var(--hs-color-buttons-warning-button-color-buttontext-warning-hover);
+  border-color: var(--hs-color-buttons-warning-button-color-buttonborder-warning-hover);
+  background-color: var(--hs-color-buttons-warning-button-color-buttonbackground-warning-hover);
+}
+button.warning:focus {
+  color: var(--hs-color-buttons-warning-button-color-buttontext-warning-focused);
+  border-color: var(--hs-color-buttons-warning-button-color-buttonborder-warning-focused);
+  background-color: var(--hs-color-buttons-warning-button-color-buttonbackground-warning-focused);
+}
+button.warning:active {
+  color: var(--hs-color-buttons-warning-button-color-buttontext-warning-pressed);
+  background-color: var(--hs-color-buttons-warning-button-color-buttonbackground-warning-pressed);
 }
 
 button.error {
-  color: var(--hs-color-typography-text-color-text-neutralcool-lighter);
-  background-color: var(--hs-color-buttons-danger-button-color-buttonborder-danger-default);
+  color: var(--hs-color-buttons-danger-button-color-buttontext-danger-default);
+  border-color: var(--hs-color-buttons-danger-button-color-buttonborder-danger-default);
+  background-color: var(--hs-color-buttons-danger-button-color-buttonbackground-danger-default);
+}
+button.error:hover {
+  color: var(--hs-color-buttons-danger-button-color-buttontext-danger-hover);
+  border-color: var(--hs-color-buttons-danger-button-color-buttonborder-danger-hover);
+  background-color: var(--hs-color-buttons-danger-button-color-buttonbackground-danger-hover);
+}
+button.error:focus {
+  color: var(--hs-color-buttons-danger-button-color-buttontext-danger-focused);
+  border-color: var(--hs-color-buttons-danger-button-color-buttonborder-danger-focused);
+  background-color: var(--hs-color-buttons-danger-button-color-buttonbackground-danger-focused);
+}
+button.error:active {
+  color: var(--hs-color-buttons-danger-button-color-buttontext-danger-pressed);
+  background-color: var(--hs-color-buttons-danger-button-color-buttonbackground-danger-pressed);
 }
 
 button.small {

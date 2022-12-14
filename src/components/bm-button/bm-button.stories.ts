@@ -20,6 +20,12 @@ export default {
       control: { type: 'radio' },
       description: 'The button size'
     },
+
+    // state: {
+    //   options: ['active', 'disabled'],
+    //   control: { type: 'radio' },
+    //   description: 'The button state'
+    // },
   }
 };
 
@@ -45,6 +51,7 @@ Button.args = {
   text: 'Button',
   variant: 'primary',
   size: 'medium',
+  // state: 'active',
 };
 
 export const RedButton = Template.bind({});
@@ -52,6 +59,7 @@ RedButton.args = {
   text: 'Button',
   variant: 'error',
   size: 'medium',
+  // state: 'active'
 };
 
 // export const RedButton = Template.bind({});
