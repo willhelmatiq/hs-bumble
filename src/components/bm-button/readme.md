@@ -10,7 +10,7 @@
 | Property  | Attribute | Description | Type     | Default     |
 | --------- | --------- | ----------- | -------- | ----------- |
 | `size`    | `size`    |             | `string` | `"medium"`  |
-| `variant` | `variant` |             | `string` | `"neutral"` |
+| `variant` | `variant` |             | `string` | `"primary"` |
 
 
 ## Events

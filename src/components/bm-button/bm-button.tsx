@@ -8,7 +8,7 @@ import { Component, h, Prop, Event } from '@stencil/core';
 export class BmButton {
 
   @Prop()
-  variant = "neutral";
+  variant = "primary";
 
   @Prop()
   size = "medium";

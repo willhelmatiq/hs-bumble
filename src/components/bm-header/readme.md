@@ -17,10 +17,11 @@ components in our Design System.
 
 ## Properties
 
-| Property    | Attribute    | Description                                                                                                                 | Type                            | Default  |
-| ----------- | ------------ | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | -------- |
-| `level`     | `level`      | The `level` property allows users to indicate what header hierarchy this element is. It must take a number from `1` to `6`. | `number`                        | `1`      |
-| `textAlign` | `text-align` | Provides support for implementing horizontal alignment to the text contained in the header.                                 | `"center" \| "left" \| "right"` | `'left'` |
+| Property               | Attribute    | Description                                                                                                                 | Type                            | Default  |
+| ---------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | -------- |
+| `headerAriaAttributes` | --           |                                                                                                                             | `{}`                            | `{}`     |
+| `level`                | `level`      | The `level` property allows users to indicate what header hierarchy this element is. It must take a number from `1` to `6`. | `number`                        | `1`      |
+| `textAlign`            | `text-align` | Provides support for implementing horizontal alignment to the text contained in the header.                                 | `"center" \| "left" \| "right"` | `'left'` |
 
 
 ----------------------------------------------

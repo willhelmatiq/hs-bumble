@@ -1,6 +1,5 @@
 import { Component, h, Prop, Element } from '@stencil/core';
-import { css } from '@emotion/css';
-import { ColorTypographyHeaderColorHeaderPrimary, ColorTypographyTextColorTextNeutralcoolLighter, FontTextStylesHeaderH1Heading } from '../../design-tokens/js/variables.js';
+// import { css } from '@emotion/css';
 
 /**
  * Use this array as a pivotal collection of Host attributes to remove.
@@ -35,7 +34,7 @@ const ariaAttributes = [
  */
 @Component({
   // The component decorator object payload is documented at https://stenciljs.com/docs/component
-  tag: 'hs-header',
+  tag: 'bm-header',
   styleUrl: 'bm-header.css',
   shadow: false,
   scoped: true,
@@ -69,6 +68,7 @@ export class BmHeader {
   @Prop({ reflect: true })
   textAlign: 'left' | 'right' | 'center' = 'left'; // This annotation is a TypeScript union type with a default value set to 'left'
 
+  @Prop({reflect: true})
   /**
    * This is a class field. It is not visible as a property since it lacks
    * the @Prop decorator, but can consumed internally from other functions and
@@ -118,27 +118,27 @@ export class BmHeader {
      * from our set of Design Tokens traspiled into JS constants. This is a convenient
      * way to implement dynamic CSS based on component logic or external tokens.
      */
-    const tagStyles = css`
-      color: ${this.level === 1 ? ColorTypographyHeaderColorHeaderPrimary : ColorTypographyTextColorTextNeutralcoolLighter};
-      font-size: ${this.level === 1 ? `${FontTextStylesHeaderH1Heading.fontSize}px` : undefined};
-      text-align: ${this.textAlign};
-    `;
+    // const tagStyles = css`
+    //   color: ${this.level === 1 ? ColorTypographyHeaderColorHeaderPrimary : ColorTypographyTextColorTextNeutralcoolLighter};
+    //   font-size: ${`${this.headings[this.level]}px`};
+    //   text-align: ${this.textAlign};
+    // `;
 
-    return (
-      <Tag className={tagStyles} role="heading">
-        <slot></slot>
-      </Tag>
-    );
+    // return (
+    //   <Tag className={tagStyles} role="heading">
+    //     <slot></slot>
+    //   </Tag>
+    // );
 
     /**
      * Uncomment the code block below and replace with it the return statement above
      * to switch to the pure CSS-driven strategy approach for the component (rather than
      * the CSS-in-JS approach strategy depicted above).
      */
-    // return (
-    //   <Tag className={`align-${this.textAlign}`} role="heading">
-    //     <slot></slot>
-    //   </Tag>
-    // );
+    return (
+      <Tag className={`align-${this.textAlign}`} role="heading">
+        <slot></slot>
+      </Tag>
+    );
   }
 }

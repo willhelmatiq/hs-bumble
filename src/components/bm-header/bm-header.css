@@ -1,3 +1,5 @@
+@import "../../design-tokens/css/_variables.css";
+
 :host {
   display: block;
 }
@@ -12,4 +14,34 @@
 
 .align-center {
   text-align: center;
+}
+*{
+  font-family: 'var(--hs-typography-text-styles-body-p2-section-header-font-family)', sans-serif;
+  color: var(--hs-color-typography-text-color-text-neutralcool);
+}
+h1 {
+  font-size: 56px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 48px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 40px;
+  margin: 0;
+}
+h4 {
+  font-size: 32px;
+  margin: 0;
+}
+h5 {
+  font-size: 24px;
+  margin: 0;
+}
+h6 {
+  font-size: 18px;
+  margin: 0;
 }

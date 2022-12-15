@@ -10,7 +10,8 @@ export namespace Components {
         "size": string;
         "variant": string;
     }
-    interface HsHeader {
+    interface BmHeader {
+        "headerAriaAttributes": {};
         /**
           * The `level` property allows users to indicate what header hierarchy this element is. It must take a number from `1` to `6`.
          */
@@ -19,6 +20,16 @@ export namespace Components {
           * Provides support for implementing horizontal alignment to the text contained in the header.
          */
         "textAlign": 'left' | 'right' | 'center';
+    }
+    interface BmRadioButtonGroup {
+        "name": any;
+    }
+    interface BmRadioButtonItem {
+        "value": any;
+    }
+    interface BmStack {
+        "gap": 'large' | 'small' | 'none';
+        "orientation": Orientation;
     }
     interface HsTextInput {
         "fontStyle": 'normal' | 'italic' | 'oblique' | 'inherit';
@@ -35,11 +46,29 @@ declare global {
         prototype: HTMLBmButtonElement;
         new (): HTMLBmButtonElement;
     };
-    interface HTMLHsHeaderElement extends Components.HsHeader, HTMLStencilElement {
+    interface HTMLBmHeaderElement extends Components.BmHeader, HTMLStencilElement {
     }
-    var HTMLHsHeaderElement: {
-        prototype: HTMLHsHeaderElement;
-        new (): HTMLHsHeaderElement;
+    var HTMLBmHeaderElement: {
+        prototype: HTMLBmHeaderElement;
+        new (): HTMLBmHeaderElement;
+    };
+    interface HTMLBmRadioButtonGroupElement extends Components.BmRadioButtonGroup, HTMLStencilElement {
+    }
+    var HTMLBmRadioButtonGroupElement: {
+        prototype: HTMLBmRadioButtonGroupElement;
+        new (): HTMLBmRadioButtonGroupElement;
+    };
+    interface HTMLBmRadioButtonItemElement extends Components.BmRadioButtonItem, HTMLStencilElement {
+    }
+    var HTMLBmRadioButtonItemElement: {
+        prototype: HTMLBmRadioButtonItemElement;
+        new (): HTMLBmRadioButtonItemElement;
+    };
+    interface HTMLBmStackElement extends Components.BmStack, HTMLStencilElement {
+    }
+    var HTMLBmStackElement: {
+        prototype: HTMLBmStackElement;
+        new (): HTMLBmStackElement;
     };
     interface HTMLHsTextInputElement extends Components.HsTextInput, HTMLStencilElement {
     }
@@ -49,7 +78,10 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "bm-button": HTMLBmButtonElement;
-        "hs-header": HTMLHsHeaderElement;
+        "bm-header": HTMLBmHeaderElement;
+        "bm-radio-button-group": HTMLBmRadioButtonGroupElement;
+        "bm-radio-button-item": HTMLBmRadioButtonItemElement;
+        "bm-stack": HTMLBmStackElement;
         "hs-text-input": HTMLHsTextInputElement;
     }
 }
@@ -59,7 +91,8 @@ declare namespace LocalJSX {
         "size"?: string;
         "variant"?: string;
     }
-    interface HsHeader {
+    interface BmHeader {
+        "headerAriaAttributes"?: {};
         /**
           * The `level` property allows users to indicate what header hierarchy this element is. It must take a number from `1` to `6`.
          */
@@ -69,12 +102,25 @@ declare namespace LocalJSX {
          */
         "textAlign"?: 'left' | 'right' | 'center';
     }
+    interface BmRadioButtonGroup {
+        "name"?: any;
+    }
+    interface BmRadioButtonItem {
+        "value"?: any;
+    }
+    interface BmStack {
+        "gap"?: 'large' | 'small' | 'none';
+        "orientation"?: Orientation;
+    }
     interface HsTextInput {
         "fontStyle"?: 'normal' | 'italic' | 'oblique' | 'inherit';
     }
     interface IntrinsicElements {
         "bm-button": BmButton;
-        "hs-header": HsHeader;
+        "bm-header": BmHeader;
+        "bm-radio-button-group": BmRadioButtonGroup;
+        "bm-radio-button-item": BmRadioButtonItem;
+        "bm-stack": BmStack;
         "hs-text-input": HsTextInput;
     }
 }
@@ -83,7 +129,10 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "bm-button": LocalJSX.BmButton & JSXBase.HTMLAttributes<HTMLBmButtonElement>;
-            "hs-header": LocalJSX.HsHeader & JSXBase.HTMLAttributes<HTMLHsHeaderElement>;
+            "bm-header": LocalJSX.BmHeader & JSXBase.HTMLAttributes<HTMLBmHeaderElement>;
+            "bm-radio-button-group": LocalJSX.BmRadioButtonGroup & JSXBase.HTMLAttributes<HTMLBmRadioButtonGroupElement>;
+            "bm-radio-button-item": LocalJSX.BmRadioButtonItem & JSXBase.HTMLAttributes<HTMLBmRadioButtonItemElement>;
+            "bm-stack": LocalJSX.BmStack & JSXBase.HTMLAttributes<HTMLBmStackElement>;
             "hs-text-input": LocalJSX.HsTextInput & JSXBase.HTMLAttributes<HTMLHsTextInputElement>;
         }
     }
