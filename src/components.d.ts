@@ -24,6 +24,10 @@ export namespace Components {
          */
         "textAlign": 'left' | 'right' | 'center';
     }
+    interface BmStack {
+        "gap": 'large' | 'small' | 'none';
+        "orientation": Orientation;
+    }
     interface HsTextInput {
         "fontStyle": 'normal' | 'italic' | 'oblique' | 'inherit';
     }
@@ -51,6 +55,12 @@ declare global {
         prototype: HTMLBmHeaderElement;
         new (): HTMLBmHeaderElement;
     };
+    interface HTMLBmStackElement extends Components.BmStack, HTMLStencilElement {
+    }
+    var HTMLBmStackElement: {
+        prototype: HTMLBmStackElement;
+        new (): HTMLBmStackElement;
+    };
     interface HTMLHsTextInputElement extends Components.HsTextInput, HTMLStencilElement {
     }
     var HTMLHsTextInputElement: {
@@ -61,6 +71,7 @@ declare global {
         "bm-badge": HTMLBmBadgeElement;
         "bm-button": HTMLBmButtonElement;
         "bm-header": HTMLBmHeaderElement;
+        "bm-stack": HTMLBmStackElement;
         "hs-text-input": HTMLHsTextInputElement;
     }
 }
@@ -84,6 +95,10 @@ declare namespace LocalJSX {
          */
         "textAlign"?: 'left' | 'right' | 'center';
     }
+    interface BmStack {
+        "gap"?: 'large' | 'small' | 'none';
+        "orientation"?: Orientation;
+    }
     interface HsTextInput {
         "fontStyle"?: 'normal' | 'italic' | 'oblique' | 'inherit';
     }
@@ -91,6 +106,7 @@ declare namespace LocalJSX {
         "bm-badge": BmBadge;
         "bm-button": BmButton;
         "bm-header": BmHeader;
+        "bm-stack": BmStack;
         "hs-text-input": HsTextInput;
     }
 }
@@ -101,6 +117,7 @@ declare module "@stencil/core" {
             "bm-badge": LocalJSX.BmBadge & JSXBase.HTMLAttributes<HTMLBmBadgeElement>;
             "bm-button": LocalJSX.BmButton & JSXBase.HTMLAttributes<HTMLBmButtonElement>;
             "bm-header": LocalJSX.BmHeader & JSXBase.HTMLAttributes<HTMLBmHeaderElement>;
+            "bm-stack": LocalJSX.BmStack & JSXBase.HTMLAttributes<HTMLBmStackElement>;
             "hs-text-input": LocalJSX.HsTextInput & JSXBase.HTMLAttributes<HTMLHsTextInputElement>;
         }
     }
