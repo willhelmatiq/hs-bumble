@@ -13,9 +13,8 @@ export default {
   argTypes: {
     // This will create an `args.variant` binding for your component 
     text: {
-      options: ['default', 'hollow', 'primary', 'success', 'accent', 'warning', 'danger'],        // Value presets
-      control: { type: 'select' },          // Knob type. It can be select, radio, etc
-      description: 'The badge variant', 
+      description: 'Transcluded text to be injected in the component slot',
+      defaultValue: 'default',
     },
     variant: {
       options: ['default', 'hollow', 'primary', 'success', 'accent', 'warning', 'danger'],        // Value presets

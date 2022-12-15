@@ -55,3 +55,55 @@ div.primary:focus {
   background-color: var(--hs-color-coor-palette-primary-color-lighter);
   border: 2px solid var(--hs-color-coor-palette-primary-color-darker);
 }
+
+div.success {
+  background-color: var(--hs-color-coor-palette-success-color-lightest);
+  border: 2px solid var(--hs-color-coor-palette-success-color);
+}
+div.success:hover {
+  background-color: var(--hs-color-coor-palette-success-color);
+  border: 2px solid var(--hs-color-coor-palette-success-color);
+}
+div.success:focus {
+  background-color: var(--hs-color-coor-palette-success-color-lightest);
+  border: 2px solid var(--hs-color-coor-palette-success-color-darker);
+}
+
+div.accent {
+  background-color: var(--hs-color-coor-palette-secondary-color-lightest);
+  border: 2px solid var(--hs-color-coor-palette-secondary-color-lighter);
+}
+div.accent:hover {
+  background-color: var(--hs-color-coor-palette-secondary-color-lighter);
+  border: 2px solid var(--hs-color-coor-palette-secondary-color-lighter);
+}
+div.accent:focus {
+  background-color: var(--hs-color-coor-palette-secondary-color-lightest);
+  border: 2px solid var(--hs-color-coor-palette-secondary-color);
+}
+
+div.warning {
+  background-color: var(--hs-color-coor-palette-warning-color-lighter);
+  border: 2px solid var(--hs-color-coor-palette-warning-color);
+}
+div.warning:hover {
+  background-color: var(--hs-color-coor-palette-warning-color);
+  border: 2px solid var(--hs-color-coor-palette-warning-color);
+}
+div.warning:focus {
+  background-color: var(--hs-color-coor-palette-warning-color-lighter);
+  border: 2px solid var(--hs-color-coor-palette-warning-color-darker);
+}
+
+div.danger {
+  background-color: var(--hs-color-coor-palette-danger-color-lightest);
+  border: 2px solid var(--hs-color-coor-palette-danger-color);
+}
+div.danger:hover {
+  background-color: var(--hs-color-coor-palette-danger-color);
+  border: 2px solid var(--hs-color-coor-palette-danger-color);
+}
+div.danger:focus {
+  background-color: var(--hs-color-coor-palette-danger-color-lightest);
+  border: 2px solid var(--hs-color-coor-palette-danger-color-darker);
+}
