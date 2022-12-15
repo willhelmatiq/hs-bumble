@@ -6,6 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface BmBadge {
+        "variant": string;
+    }
     interface BmButton {
         "size": string;
         "variant": string;
@@ -21,16 +24,6 @@ export namespace Components {
          */
         "textAlign": 'left' | 'right' | 'center';
     }
-    interface BmRadioButtonGroup {
-        "name": any;
-    }
-    interface BmRadioButtonItem {
-        "value": any;
-    }
-    interface BmStack {
-        "gap": 'large' | 'small' | 'none';
-        "orientation": Orientation;
-    }
     interface HsTextInput {
         "fontStyle": 'normal' | 'italic' | 'oblique' | 'inherit';
     }
@@ -40,6 +33,12 @@ export interface BmButtonCustomEvent<T> extends CustomEvent<T> {
     target: HTMLBmButtonElement;
 }
 declare global {
+    interface HTMLBmBadgeElement extends Components.BmBadge, HTMLStencilElement {
+    }
+    var HTMLBmBadgeElement: {
+        prototype: HTMLBmBadgeElement;
+        new (): HTMLBmBadgeElement;
+    };
     interface HTMLBmButtonElement extends Components.BmButton, HTMLStencilElement {
     }
     var HTMLBmButtonElement: {
@@ -52,24 +51,6 @@ declare global {
         prototype: HTMLBmHeaderElement;
         new (): HTMLBmHeaderElement;
     };
-    interface HTMLBmRadioButtonGroupElement extends Components.BmRadioButtonGroup, HTMLStencilElement {
-    }
-    var HTMLBmRadioButtonGroupElement: {
-        prototype: HTMLBmRadioButtonGroupElement;
-        new (): HTMLBmRadioButtonGroupElement;
-    };
-    interface HTMLBmRadioButtonItemElement extends Components.BmRadioButtonItem, HTMLStencilElement {
-    }
-    var HTMLBmRadioButtonItemElement: {
-        prototype: HTMLBmRadioButtonItemElement;
-        new (): HTMLBmRadioButtonItemElement;
-    };
-    interface HTMLBmStackElement extends Components.BmStack, HTMLStencilElement {
-    }
-    var HTMLBmStackElement: {
-        prototype: HTMLBmStackElement;
-        new (): HTMLBmStackElement;
-    };
     interface HTMLHsTextInputElement extends Components.HsTextInput, HTMLStencilElement {
     }
     var HTMLHsTextInputElement: {
@@ -77,15 +58,16 @@ declare global {
         new (): HTMLHsTextInputElement;
     };
     interface HTMLElementTagNameMap {
+        "bm-badge": HTMLBmBadgeElement;
         "bm-button": HTMLBmButtonElement;
         "bm-header": HTMLBmHeaderElement;
-        "bm-radio-button-group": HTMLBmRadioButtonGroupElement;
-        "bm-radio-button-item": HTMLBmRadioButtonItemElement;
-        "bm-stack": HTMLBmStackElement;
         "hs-text-input": HTMLHsTextInputElement;
     }
 }
 declare namespace LocalJSX {
+    interface BmBadge {
+        "variant"?: string;
+    }
     interface BmButton {
         "onClicked"?: (event: BmButtonCustomEvent<any>) => void;
         "size"?: string;
@@ -102,25 +84,13 @@ declare namespace LocalJSX {
          */
         "textAlign"?: 'left' | 'right' | 'center';
     }
-    interface BmRadioButtonGroup {
-        "name"?: any;
-    }
-    interface BmRadioButtonItem {
-        "value"?: any;
-    }
-    interface BmStack {
-        "gap"?: 'large' | 'small' | 'none';
-        "orientation"?: Orientation;
-    }
     interface HsTextInput {
         "fontStyle"?: 'normal' | 'italic' | 'oblique' | 'inherit';
     }
     interface IntrinsicElements {
+        "bm-badge": BmBadge;
         "bm-button": BmButton;
         "bm-header": BmHeader;
-        "bm-radio-button-group": BmRadioButtonGroup;
-        "bm-radio-button-item": BmRadioButtonItem;
-        "bm-stack": BmStack;
         "hs-text-input": HsTextInput;
     }
 }
@@ -128,11 +98,9 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "bm-badge": LocalJSX.BmBadge & JSXBase.HTMLAttributes<HTMLBmBadgeElement>;
             "bm-button": LocalJSX.BmButton & JSXBase.HTMLAttributes<HTMLBmButtonElement>;
             "bm-header": LocalJSX.BmHeader & JSXBase.HTMLAttributes<HTMLBmHeaderElement>;
-            "bm-radio-button-group": LocalJSX.BmRadioButtonGroup & JSXBase.HTMLAttributes<HTMLBmRadioButtonGroupElement>;
-            "bm-radio-button-item": LocalJSX.BmRadioButtonItem & JSXBase.HTMLAttributes<HTMLBmRadioButtonItemElement>;
-            "bm-stack": LocalJSX.BmStack & JSXBase.HTMLAttributes<HTMLBmStackElement>;
             "hs-text-input": LocalJSX.HsTextInput & JSXBase.HTMLAttributes<HTMLHsTextInputElement>;
         }
     }
