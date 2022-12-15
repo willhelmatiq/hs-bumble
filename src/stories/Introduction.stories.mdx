@@ -15,13 +15,25 @@ import StackAlt from './assets/stackalt.svg';
     .subheading {
       --mediumdark: '#999999';
       font-weight: 900;
-      font-size: 13px;
+      font-size: 19px;
       color: #999;
       letter-spacing: 6px;
       line-height: 24px;
       text-transform: uppercase;
       margin-bottom: 12px;
       margin-top: 40px;
+    }
+
+    .subsubheading {
+      --mediumdark: '#999999';
+      font-weight: 900;
+      font-size: 14px;
+      color: #999;
+      letter-spacing: 6px;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      margin-top: 10px;
     }
 
     .link-list {
@@ -111,52 +123,181 @@ import StackAlt from './assets/stackalt.svg';
       font-size: 12px;
       display: inline-block;
     }
+
+    .parentGrid {
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+      gap: 0% 0%; 
+      margin-bottom:20px;
+    }
+
+    .parentGrid1 {
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: 1fr 1fr 1fr 1fr; 
+      gap: 0% 0%; 
+      margin-bottom:20px;
+    }
   `}
 </style>
 
-# Welcome to our Design System
+# Welcome to Bee Design System
+<div className="subheading">About Bee</div>
 
-Storybook helps you build UI components in isolation from your app's business logic, data, and context.
-That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+Beee is a design system inspired and built by like-minded passionates: 
+designers, engineers and researchers. It is created to ensure a consistent, 
+accessible and accountable user experience across all the platforms of Bumble Inc. 
+The Beee’s aim is to provide engineers, researchers and designers with an extensive yet 
+easy to use tool for the ultimate benefit of users. The design system is built on a basis of Figma and Stencil. 
 
-Browse example stories now by navigating to them in the sidebar.
-View their code in the `stories` directory to learn how they work.
-We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+<div className="subheading">Core Principles</div>
+<div className="subsubheading">Make meaningful user experiences</div>
+All the products, solutions and resources created should aim at providing users better experience, 
+serve their needs and add marginal value to them. 
 
-<div className="subheading">Learn</div>
+<div className="subsubheading">Be part of the community</div>
+The Beee is built to improve user experience. We encourage sharing ideas, feedback, contribution and co-creation. 
 
-<div className="link-list">
-  <a className="link-item" href="https://storybook.js.org/docs" target="_blank">
-    <img src={Repo} alt="repo" />
-    <span>
-      <strong>Storybook documentation</strong>
-      Configure, customize, and extend
-    </span>
-  </a>
-  <a className="link-item" href="https://storybook.js.org/tutorials/" target="_blank">
-    <img src={Direction} alt="direction" />
-    <span>
-      <strong>In-depth guides</strong>
-      Best practices from leading teams
-    </span>
-  </a>
-  <a className="link-item" href="https://github.com/storybookjs/storybook" target="_blank">
-    <img src={Code} alt="code" />
-    <span>
-      <strong>GitHub project</strong>
-      View the source and add issues
-    </span>
-  </a>
-  <a className="link-item" href="https://discord.gg/storybook" target="_blank">
-    <img src={Comments} alt="comments" />
-    <span>
-      <strong>Discord chat</strong>
-      Chat with maintainers and the community
-    </span>
-  </a>
+<div className="subsubheading">Treat with respect and regard diversity</div>
+At Beee we set one of main values as equality and respect. We work hard to provide 
+a universal solution and care a lot about ethics and the way we approach our users. 
+Our team implements the highest accessibility standards following the WCAG 2.1 AA guidelines. 
+It is a priority for us to make a lovable product for all the diverse user audience.  
+
+<div className="subheading">Target Audience</div>
+Our core target audience are dedicated UX research, engineering and design practitioners willing to build a cohesive valuable solution. 
+
+<div className="subheading">Style guidelines</div>
+<div className="subsubheading">Colors</div>
+At Beee we identify and set color schemes and patterns that can be used to design consistently with respect to the brand. 
+Colors are one of leading means of digital communication and translate brand’s identity, mood and can drive user behavior. 
+
+Normally, we use one primary color and a secondary color both of different depths and a warm gray and a cold gray neutral 
+palette to serve as a base for the brand colors. We also provide a set of success, warning and danger colors to communicate 
+feedback to a user. 
+
+Main color is a sunglow color (yellowish-warm). It sets the mind of:
+- Optimistic and exciting
+- Values people
+- Signifies communication
+- Intellectual, imaginative, and idealistic
+
+Secondary color is a calm blue. It indicates:
+- Respect
+- Trustworthiness
+- Reliability
+- Neutral gray palette indicated solid basement, confidence, ground and compromise. 
+
+We provide color tokens and user scenarios for each color picked for more cohesive designing. 
+
+<div className="subsubheading">Typography</div>
+<div className="subsubheading">Inner Font</div>
+Inter UI is a typeface specially designed for user interfaces with a focus on high legibility of 
+small-to-medium sized text on computer screens. The family features a tall x-height to aid in 
+readability of mixed-case and lower-case text. 
+
+<div className="subsubheading">Font Weights</div>
+To maintain a light, clean look, Beee does not use a weight stronger than semibold.
+
+<div className="subheading">Content Guidelines</div>
+Content guidelines provide principles and best practices around writing for user 
+experience along with general voice and style guidance.
+
+<div className="subsubheading">Why Important</div>
+Microcopy, or every word, phrase, message or article a user sees in an application matters. 
+Inconsistent, erroneous or disrespectful copy doesn’t add any value. Elaborated and convincing copy, 
+on the other hand, is an integral part of UX design.
+
+<div className="subsubheading">Goal</div>
+- Create a monolithic communication pattern across products and applications
+- Cultivate a kind and inclusive perception of products
+- Promote brand and its values among all user scenarios
+
+<div className="subsubheading">Voice and Tone</div>
+A brand tone of voice defines how a brand personality sounds across any written or verbal content. 
+While a brand uses multiple tones depending on a situation, context and emotion they are willing to 
+express, brand voice should always remain unchanged. It is one of stand away features, by which users 
+recognize the brand along with brand color, logo etc.
+
+Beee’s voice is:
+- Friendly
+- Engaging
+- Respectful
+
+<div className="subsubheading">Freindly voice notes</div>
+<div className="parentGrid">
+  <p>DOs</p>
+  <p>DONTs</p>
+  <p>Use positive affirmations and wording</p>
+  <p>Avoid excessive use of no/not </p>
+  <p>Treat users personally, when suitable</p>
+  <p>Robotic, one-suit-all copy</p>
+  <p>Communicate in plain language, avoid very difficult words</p>
+  <p>Overcomplicated, nested sentences with mind bending terms</p>
+  <p>Ideally microcopy should sound like a talk, not a snobbish monologue</p>
+  <p> </p>
 </div>
 
-<div className="tip-wrapper">
-  <span className="tip">Tip</span>Edit the Markdown in{' '}
-  <code>stories/Introduction.stories.mdx</code>
+<div className="subsubheading">Engaging voice notes</div>
+<div className="parentGrid1">
+  <p>DOs</p>
+  <p>DONTs</p>
+  <p>Express your intention. Clearly. Brief. Right to the point</p>
+  <p>Don’t go in circles, and circles..and circles</p>
+  <p>Collaborate with user</p>
+  <p> </p>
+  <p>Refer to users when possible to create a connection </p>
+  <p>Stay-aside, isolated sounding. You are here for the user. </p>
 </div>
+
+<div className="subsubheading">Respectful voice notes</div>
+<div className="parentGrid1">
+  <p>DOs</p>
+  <p>DONTs</p>
+  <p>Communicate in a way that includes everyone</p>
+  <p>Don’t use very specific jokes, references and never make any culture-specific examples</p>
+  <p>“Press the “learn more” button”</p>
+  <p>“Press the “yellow” button</p>
+  <p>Express your opinion. Contradiction is ok, but should never be offensive</p>
+  <p>Don’t say other people are wrong; furthermore, don’t do it in impolite way</p>
+</div>
+
+
+Depending on a type of communication and current user experience or journey several tones can be used.
+
+Beee’s tone might be:
+- encouraging
+- clarifying
+- narrating
+
+A couple of examples demonstrating the usage of tones follows:
+- Wow. A user has just upgraded his/her account. You are willing to 
+congratulate him/her with an encouraging tone. 
+- An employee had some issues yesterday when she tried to log in to a 
+new working portal. You will send her some additional information or 
+a link with FAQ. Do it using a clarifying tone.
+- The developers worked hard and you are releasing a new version 
+of an app this year. It introduces a bunch of new features. Once a user 
+downloads it, you will drive him/her through a real-estate tour of what is 
+new. Use a narrating tone for that.  
+
+
+<div className="subsubheading">Content checklist</div>
+The copy will fail if:
+- Inappropriate or ambiguous wording is used
+- Too official tone and complex syntax structure
+- The copy is misleading or offensive
+- The copy explicitly highlights different levels of accessibility
+- There are misprints or punctuation is disregarded 
+The copy will pass if: 
+- The wording is clear and univocal
+- Simple structure of sentences. Vivid and friendly tone
+- No hidden meaning is used. All copy abides by “equality and respect” rule by default
+- All the content embraces accessibility guidelines. However, leveling is never spoken out loud
+- All the texts are always to be checked by a redactor. 
+
+Writing for all audiences
+It is paramount to design, including writing, with all users’ abilities in mind. 
+The best practice is to comply to Web Content Accessibility Guidelines (WCAG) guidelines.
+
