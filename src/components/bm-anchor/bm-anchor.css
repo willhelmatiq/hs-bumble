@@ -1,0 +1,20 @@
+@import "../../design-tokens/css/_variables.css";
+
+:host {
+  display: block;
+}
+
+a {
+  color: var(--hs-color-coor-palette-secondary-color);
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  text-decoration: underline;
+}

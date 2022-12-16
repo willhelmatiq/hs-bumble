@@ -6,6 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface BmAnchor {
+        "variant": string;
+    }
     interface BmBadge {
         "variant": string;
     }
@@ -37,6 +40,12 @@ export interface BmButtonCustomEvent<T> extends CustomEvent<T> {
     target: HTMLBmButtonElement;
 }
 declare global {
+    interface HTMLBmAnchorElement extends Components.BmAnchor, HTMLStencilElement {
+    }
+    var HTMLBmAnchorElement: {
+        prototype: HTMLBmAnchorElement;
+        new (): HTMLBmAnchorElement;
+    };
     interface HTMLBmBadgeElement extends Components.BmBadge, HTMLStencilElement {
     }
     var HTMLBmBadgeElement: {
@@ -68,6 +77,7 @@ declare global {
         new (): HTMLHsTextInputElement;
     };
     interface HTMLElementTagNameMap {
+        "bm-anchor": HTMLBmAnchorElement;
         "bm-badge": HTMLBmBadgeElement;
         "bm-button": HTMLBmButtonElement;
         "bm-header": HTMLBmHeaderElement;
@@ -76,6 +86,9 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface BmAnchor {
+        "variant"?: string;
+    }
     interface BmBadge {
         "variant"?: string;
     }
@@ -103,6 +116,7 @@ declare namespace LocalJSX {
         "fontStyle"?: 'normal' | 'italic' | 'oblique' | 'inherit';
     }
     interface IntrinsicElements {
+        "bm-anchor": BmAnchor;
         "bm-badge": BmBadge;
         "bm-button": BmButton;
         "bm-header": BmHeader;
@@ -114,6 +128,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "bm-anchor": LocalJSX.BmAnchor & JSXBase.HTMLAttributes<HTMLBmAnchorElement>;
             "bm-badge": LocalJSX.BmBadge & JSXBase.HTMLAttributes<HTMLBmBadgeElement>;
             "bm-button": LocalJSX.BmButton & JSXBase.HTMLAttributes<HTMLBmButtonElement>;
             "bm-header": LocalJSX.BmHeader & JSXBase.HTMLAttributes<HTMLBmHeaderElement>;
