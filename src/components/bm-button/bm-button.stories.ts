@@ -54,12 +54,12 @@ Button.args = {
   // state: 'active',
 };
 
-export const RedButton = Template.bind({});
-RedButton.args = {
-  text: 'Button',
-  variant: 'error',
-  size: 'medium',
-};
+// export const RedButton = Template.bind({});
+// RedButton.args = {
+//   text: 'Button',
+//   variant: 'error',
+//   size: 'medium',
+// };
 
 // export const RedButton = Template.bind({});
 // RedButton.args = {

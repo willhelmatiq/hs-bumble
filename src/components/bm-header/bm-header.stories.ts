@@ -13,7 +13,7 @@ export default {
   argTypes: {
     text: {
       description: 'Transcluded text to be injected in the component slot',
-      defaultValue: 'Lorem ipsum dolor sit amet',
+      defaultValue: 'Treat with respect and regard diversity',
       control: { type: 'text' },
     },
     textAlign: {
