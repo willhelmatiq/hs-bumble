@@ -17,7 +17,6 @@ export namespace Components {
         "variant": string;
     }
     interface BmCard {
-        "variant": string;
     }
     interface BmHeader {
         "headerAriaAttributes": {};
@@ -37,6 +36,22 @@ export namespace Components {
         "gap": 'large' | 'small' | 'none';
         "orientation": Orientation;
     }
+    interface BmTab {
+        "toggleSelected": (selected: boolean) => Promise<void>;
+    }
+    interface BmTabList {
+    }
+    interface BmTabPanel {
+        "toggleSelected": (selected: boolean) => Promise<void>;
+    }
+    interface BmTabPanels {
+    }
+    interface BmTabs {
+        /**
+          * Configures the tab/panels to select by default upon loading.
+         */
+        "selectedIndex": number;
+    }
     interface HsTextInput {
         "fontStyle": 'normal' | 'italic' | 'oblique' | 'inherit';
     }
@@ -44,6 +59,10 @@ export namespace Components {
 export interface BmButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLBmButtonElement;
+}
+export interface BmTabCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLBmTabElement;
 }
 declare global {
     interface HTMLBmAnchorElement extends Components.BmAnchor, HTMLStencilElement {
@@ -88,6 +107,36 @@ declare global {
         prototype: HTMLBmStackElement;
         new (): HTMLBmStackElement;
     };
+    interface HTMLBmTabElement extends Components.BmTab, HTMLStencilElement {
+    }
+    var HTMLBmTabElement: {
+        prototype: HTMLBmTabElement;
+        new (): HTMLBmTabElement;
+    };
+    interface HTMLBmTabListElement extends Components.BmTabList, HTMLStencilElement {
+    }
+    var HTMLBmTabListElement: {
+        prototype: HTMLBmTabListElement;
+        new (): HTMLBmTabListElement;
+    };
+    interface HTMLBmTabPanelElement extends Components.BmTabPanel, HTMLStencilElement {
+    }
+    var HTMLBmTabPanelElement: {
+        prototype: HTMLBmTabPanelElement;
+        new (): HTMLBmTabPanelElement;
+    };
+    interface HTMLBmTabPanelsElement extends Components.BmTabPanels, HTMLStencilElement {
+    }
+    var HTMLBmTabPanelsElement: {
+        prototype: HTMLBmTabPanelsElement;
+        new (): HTMLBmTabPanelsElement;
+    };
+    interface HTMLBmTabsElement extends Components.BmTabs, HTMLStencilElement {
+    }
+    var HTMLBmTabsElement: {
+        prototype: HTMLBmTabsElement;
+        new (): HTMLBmTabsElement;
+    };
     interface HTMLHsTextInputElement extends Components.HsTextInput, HTMLStencilElement {
     }
     var HTMLHsTextInputElement: {
@@ -102,6 +151,11 @@ declare global {
         "bm-header": HTMLBmHeaderElement;
         "bm-list": HTMLBmListElement;
         "bm-stack": HTMLBmStackElement;
+        "bm-tab": HTMLBmTabElement;
+        "bm-tab-list": HTMLBmTabListElement;
+        "bm-tab-panel": HTMLBmTabPanelElement;
+        "bm-tab-panels": HTMLBmTabPanelsElement;
+        "bm-tabs": HTMLBmTabsElement;
         "hs-text-input": HTMLHsTextInputElement;
     }
 }
@@ -118,7 +172,6 @@ declare namespace LocalJSX {
         "variant"?: string;
     }
     interface BmCard {
-        "variant"?: string;
     }
     interface BmHeader {
         "headerAriaAttributes"?: {};
@@ -138,6 +191,21 @@ declare namespace LocalJSX {
         "gap"?: 'large' | 'small' | 'none';
         "orientation"?: Orientation;
     }
+    interface BmTab {
+        "onTabClick"?: (event: BmTabCustomEvent<any>) => void;
+    }
+    interface BmTabList {
+    }
+    interface BmTabPanel {
+    }
+    interface BmTabPanels {
+    }
+    interface BmTabs {
+        /**
+          * Configures the tab/panels to select by default upon loading.
+         */
+        "selectedIndex"?: number;
+    }
     interface HsTextInput {
         "fontStyle"?: 'normal' | 'italic' | 'oblique' | 'inherit';
     }
@@ -149,6 +217,11 @@ declare namespace LocalJSX {
         "bm-header": BmHeader;
         "bm-list": BmList;
         "bm-stack": BmStack;
+        "bm-tab": BmTab;
+        "bm-tab-list": BmTabList;
+        "bm-tab-panel": BmTabPanel;
+        "bm-tab-panels": BmTabPanels;
+        "bm-tabs": BmTabs;
         "hs-text-input": HsTextInput;
     }
 }
@@ -163,6 +236,11 @@ declare module "@stencil/core" {
             "bm-header": LocalJSX.BmHeader & JSXBase.HTMLAttributes<HTMLBmHeaderElement>;
             "bm-list": LocalJSX.BmList & JSXBase.HTMLAttributes<HTMLBmListElement>;
             "bm-stack": LocalJSX.BmStack & JSXBase.HTMLAttributes<HTMLBmStackElement>;
+            "bm-tab": LocalJSX.BmTab & JSXBase.HTMLAttributes<HTMLBmTabElement>;
+            "bm-tab-list": LocalJSX.BmTabList & JSXBase.HTMLAttributes<HTMLBmTabListElement>;
+            "bm-tab-panel": LocalJSX.BmTabPanel & JSXBase.HTMLAttributes<HTMLBmTabPanelElement>;
+            "bm-tab-panels": LocalJSX.BmTabPanels & JSXBase.HTMLAttributes<HTMLBmTabPanelsElement>;
+            "bm-tabs": LocalJSX.BmTabs & JSXBase.HTMLAttributes<HTMLBmTabsElement>;
             "hs-text-input": LocalJSX.HsTextInput & JSXBase.HTMLAttributes<HTMLHsTextInputElement>;
         }
     }

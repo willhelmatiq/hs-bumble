@@ -4,9 +4,22 @@
   display: block;
 }
 
-div {
+.card {
   background-color: var(--hs-color-background-color-background-neutralwhite);
   color: var(--hs-color-typography-text-color-text-neutralcool);
   height: auto;
   width: 420px;
+  filter: drop-shadow(0px 5px 5px var(--hs-color-typography-text-color-text-neutralcool));
+}
+
+h1 {
+  font-size: 16px;
+  margin: 10px 20px 15px 20px;
+  padding-top: 30px;
+}
+
+p {
+  margin: 10px 20px 5px 20px;
+  padding-bottom: 30px;
+  line-height: 24px;
 }

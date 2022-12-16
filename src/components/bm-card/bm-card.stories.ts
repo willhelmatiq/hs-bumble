@@ -24,9 +24,8 @@ export default {
  * Now you can create a reusable template for your component that you 
  * can later on customize with different values for its attribute properties and events
  */
-const Template = (args) => `
-  <bm-card variant="${args.variant}">
-    ${args.content}
+const Template = () => `
+  <bm-card >
   </bm-card>
 `;
 
@@ -40,6 +39,5 @@ const Template = (args) => `
  */
 export const Card = Template.bind({});
 Card.args = {
-  variant: 'default',
 };
 
