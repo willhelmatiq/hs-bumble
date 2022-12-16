@@ -41,6 +41,9 @@ export namespace Components {
     interface BmRadioButtonItem {
         "value": any;
     }
+    interface BmList {
+        "variant": string;
+    }
     interface BmStack {
         "gap": 'large' | 'small' | 'none';
         "orientation": Orientation;
@@ -116,18 +119,6 @@ declare global {
         prototype: HTMLBmHeaderElement;
         new (): HTMLBmHeaderElement;
     };
-    interface HTMLBmRadioButtonGroupElement extends Components.BmRadioButtonGroup, HTMLStencilElement {
-    }
-    var HTMLBmRadioButtonGroupElement: {
-        prototype: HTMLBmRadioButtonGroupElement;
-        new (): HTMLBmRadioButtonGroupElement;
-    };
-    interface HTMLBmRadioButtonItemElement extends Components.BmRadioButtonItem, HTMLStencilElement {
-    }
-    var HTMLBmRadioButtonItemElement: {
-        prototype: HTMLBmRadioButtonItemElement;
-        new (): HTMLBmRadioButtonItemElement;
-    };
     interface HTMLBmStackElement extends Components.BmStack, HTMLStencilElement {
     }
     var HTMLBmStackElement: {
@@ -178,8 +169,6 @@ declare global {
         "bm-card": HTMLBmCardElement;
         "bm-flex": HTMLBmFlexElement;
         "bm-header": HTMLBmHeaderElement;
-        "bm-radio-button-group": HTMLBmRadioButtonGroupElement;
-        "bm-radio-button-item": HTMLBmRadioButtonItemElement;
         "bm-stack": HTMLBmStackElement;
         "bm-tab": HTMLBmTabElement;
         "bm-tab-list": HTMLBmTabListElement;
@@ -220,12 +209,6 @@ declare namespace LocalJSX {
          */
         "textAlign"?: 'left' | 'right' | 'center';
     }
-    interface BmRadioButtonGroup {
-        "name"?: any;
-    }
-    interface BmRadioButtonItem {
-        "value"?: any;
-    }
     interface BmStack {
         "gap"?: 'large' | 'small' | 'none';
         "orientation"?: Orientation;
@@ -256,8 +239,6 @@ declare namespace LocalJSX {
         "bm-card": BmCard;
         "bm-flex": BmFlex;
         "bm-header": BmHeader;
-        "bm-radio-button-group": BmRadioButtonGroup;
-        "bm-radio-button-item": BmRadioButtonItem;
         "bm-stack": BmStack;
         "bm-tab": BmTab;
         "bm-tab-list": BmTabList;
@@ -278,8 +259,6 @@ declare module "@stencil/core" {
             "bm-card": LocalJSX.BmCard & JSXBase.HTMLAttributes<HTMLBmCardElement>;
             "bm-flex": LocalJSX.BmFlex & JSXBase.HTMLAttributes<HTMLBmFlexElement>;
             "bm-header": LocalJSX.BmHeader & JSXBase.HTMLAttributes<HTMLBmHeaderElement>;
-            "bm-radio-button-group": LocalJSX.BmRadioButtonGroup & JSXBase.HTMLAttributes<HTMLBmRadioButtonGroupElement>;
-            "bm-radio-button-item": LocalJSX.BmRadioButtonItem & JSXBase.HTMLAttributes<HTMLBmRadioButtonItemElement>;
             "bm-stack": LocalJSX.BmStack & JSXBase.HTMLAttributes<HTMLBmStackElement>;
             "bm-tab": LocalJSX.BmTab & JSXBase.HTMLAttributes<HTMLBmTabElement>;
             "bm-tab-list": LocalJSX.BmTabList & JSXBase.HTMLAttributes<HTMLBmTabListElement>;

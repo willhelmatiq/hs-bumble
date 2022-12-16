@@ -1,0 +1,16 @@
+@import "../../design-tokens/css/_variables.css";
+
+:host {
+  display: block;
+}
+
+ul {
+  color: var(  --hs-color-typography-header-color-header-neutralcool-darker);
+  line-height: 24px;
+  margin-left: 10px;
+  margin-bottom: 6px;
+}
+
+ul.ordered li {
+  list-style-type: decimal;
+}

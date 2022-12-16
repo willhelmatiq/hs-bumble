@@ -13,7 +13,6 @@ export class BmCard {
   render() {
     return (
       <div class={`${this.variant}`}>
-      <slot></slot>
     </div>
     );
   }
