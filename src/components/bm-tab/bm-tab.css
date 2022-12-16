@@ -8,7 +8,7 @@
   transition: border-bottom .4s;
   border-bottom: 3px solid transparent;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'var(--hs-typography-text-styles-body-p2-section-header-font-family)', sans-serif;
 }
 
 .bm-tab:hover {
@@ -17,5 +17,5 @@
 
 .bm-tab--selected {
   font-weight: 600;
-  border-bottom: 4px var(--hs-color-buttons-success-button-color-buttonbackground-success-pressed);
+  border-bottom: 4px solid var(--hs-color-background-color-background-primary);
 }
