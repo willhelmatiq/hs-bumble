@@ -1,0 +1,12 @@
+@import "../../design-tokens/css/_variables.css";
+
+:host {
+  display: block;
+}
+
+div {
+  background-color: var(--hs-color-background-color-background-neutralwhite);
+  color: var(--hs-color-typography-text-color-text-neutralcool);
+  height: auto;
+  width: 420px;
+}

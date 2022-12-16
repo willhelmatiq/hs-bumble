@@ -16,6 +16,9 @@ export namespace Components {
         "size": string;
         "variant": string;
     }
+    interface BmCard {
+        "variant": string;
+    }
     interface BmHeader {
         "headerAriaAttributes": {};
         /**
@@ -58,6 +61,12 @@ declare global {
         prototype: HTMLBmButtonElement;
         new (): HTMLBmButtonElement;
     };
+    interface HTMLBmCardElement extends Components.BmCard, HTMLStencilElement {
+    }
+    var HTMLBmCardElement: {
+        prototype: HTMLBmCardElement;
+        new (): HTMLBmCardElement;
+    };
     interface HTMLBmHeaderElement extends Components.BmHeader, HTMLStencilElement {
     }
     var HTMLBmHeaderElement: {
@@ -80,6 +89,7 @@ declare global {
         "bm-anchor": HTMLBmAnchorElement;
         "bm-badge": HTMLBmBadgeElement;
         "bm-button": HTMLBmButtonElement;
+        "bm-card": HTMLBmCardElement;
         "bm-header": HTMLBmHeaderElement;
         "bm-stack": HTMLBmStackElement;
         "hs-text-input": HTMLHsTextInputElement;
@@ -95,6 +105,9 @@ declare namespace LocalJSX {
     interface BmButton {
         "onClicked"?: (event: BmButtonCustomEvent<any>) => void;
         "size"?: string;
+        "variant"?: string;
+    }
+    interface BmCard {
         "variant"?: string;
     }
     interface BmHeader {
@@ -119,6 +132,7 @@ declare namespace LocalJSX {
         "bm-anchor": BmAnchor;
         "bm-badge": BmBadge;
         "bm-button": BmButton;
+        "bm-card": BmCard;
         "bm-header": BmHeader;
         "bm-stack": BmStack;
         "hs-text-input": HsTextInput;
@@ -131,6 +145,7 @@ declare module "@stencil/core" {
             "bm-anchor": LocalJSX.BmAnchor & JSXBase.HTMLAttributes<HTMLBmAnchorElement>;
             "bm-badge": LocalJSX.BmBadge & JSXBase.HTMLAttributes<HTMLBmBadgeElement>;
             "bm-button": LocalJSX.BmButton & JSXBase.HTMLAttributes<HTMLBmButtonElement>;
+            "bm-card": LocalJSX.BmCard & JSXBase.HTMLAttributes<HTMLBmCardElement>;
             "bm-header": LocalJSX.BmHeader & JSXBase.HTMLAttributes<HTMLBmHeaderElement>;
             "bm-stack": LocalJSX.BmStack & JSXBase.HTMLAttributes<HTMLBmStackElement>;
             "hs-text-input": LocalJSX.HsTextInput & JSXBase.HTMLAttributes<HTMLHsTextInputElement>;
