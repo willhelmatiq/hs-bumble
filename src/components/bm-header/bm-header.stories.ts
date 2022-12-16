@@ -50,8 +50,8 @@ const Template = (args) => `
  * a proper
  * Learn more about how to set up controls at https://storybook.js.org/docs/web-components/essentials/controls
  */
-export const ComponentStory = Template.bind({});
-ComponentStory.args = {
+export const HeaderStory = Template.bind({});
+HeaderStory.args = {
   textAlign: 'left',
   level: 1,
 };

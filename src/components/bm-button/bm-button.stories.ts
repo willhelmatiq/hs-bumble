@@ -59,7 +59,6 @@ RedButton.args = {
   text: 'Button',
   variant: 'error',
   size: 'medium',
-  // state: 'active'
 };
 
 // export const RedButton = Template.bind({});
